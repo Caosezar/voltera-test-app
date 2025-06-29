@@ -56,12 +56,17 @@
 			<p class="pre-input">Consultando...</p>
 		{/if}
 	{/if}
-    <a
-        class="whats-app-cta"
-        href="https://api.whatsapp.com/send/?phone=5585981433854&text=Ol%C3%A1%20Caio%2C%20seu%20teste%20foi%20visualizado.&type=phone_number&app_absent=0"
-        target="_blank"
-        aria-label="Abrir conversa no WhatsApp"
-    >
-        <img width="48" height="48" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp--v1"/>
-    </a>
+	<a
+		class="whats-app-cta"
+		href="https://api.whatsapp.com/send/?phone=5585981433854&text=Ol%C3%A1%20Caio%2C%20seu%20teste%20foi%20visualizado.&type=phone_number&app_absent=0"
+		target="_blank"
+		aria-label="Abrir conversa no WhatsApp"
+	>
+		<img
+			width="48"
+			height="48"
+			src="https://img.icons8.com/color/48/whatsapp--v1.png"
+			alt="whatsapp--v1"
+		/>
+	</a>
 </main>
