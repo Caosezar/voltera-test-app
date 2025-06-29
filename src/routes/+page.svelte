@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import type { AgifyResult } from '$lib/types';
+	import LoadSpinner from '$lib/icons/LoadSpinner.svelte';
 
 	export let data: AgifyResult;
 
@@ -34,26 +35,30 @@
 
 <main>
 	<h1>Bem-vindo à Voltera</h1>
-	<label for="name-input">Digite um nome:</label>
+	<label for="name-input">Descubra a idade estimada para um nome </label>
 	<input
 		id="name-input"
 		type="text"
 		bind:value={inputName}
-		placeholder="Ex: Maria"
+		placeholder="Digite um nome"
 		autocomplete="off"
 		on:input={onInput}
 	/>
 	{#if inputName}
 		{#if data.error}
 			<p class="error">{data.error}</p>
-		{:else if data.age !== null}
-			<div class="result-box">
-				Nome: {data.name} <br />
-				Idade estimada: {data.age} anos <br />
-				Baseado em {data.count} registros.
-			</div>
+		{:else if data.age !== null && data.count !== 0}
+			<p class="result-box">
+				Nome: <strong>{data.name}</strong> <br />
+				Idade aproximada: <strong>{data.age}</strong> anos <br />
+				Estimativa baseada em <strong>{data.count}</strong> registros.
+			</p>
+		{:else if data.age === null && data.count === 0}
+			<p class="result-box">Nenhuma estimativa encontrada para <strong>{data.name}</strong></p>
 		{:else}
-			<p class="pre-input">Consultando...</p>
+			<p class="load-box">
+				<LoadSpinner />Consultando...
+			</p>
 		{/if}
 	{/if}
 	<a

@@ -21,7 +21,7 @@ main {
     margin: 3rem auto;
     padding: 2rem 2.5rem;
     border-radius: var(--main-radius);
-    background: var(--background);
+    background: rgba(243, 243, 242, 0.85);
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     font-family: 'Segoe UI', Arial, sans-serif;
     display: flex;
@@ -39,7 +39,6 @@ label {
     margin-bottom: 0.5rem;
     display: block;
     color: var(--textcolor);
-    align-self: flex-start;
 }
 input[type='text'] {
     width: 100%;
@@ -74,15 +73,24 @@ p {
     color: var(--textprimary);
 }
 .result-box {
-    display: flex;
-    border-radius: 8px;
-    padding: 12px;
-    flex-direction: row;
-    overflow: nowrap;
-    align-items: center;
-    justify-content: center;
-    background: var(--secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
     color: #fff;
+    background: var(--secondary);
+    padding: 1rem;
+    border-radius: 8px;
+}
+.load-box{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 1.2rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #fff;
+    background: var(--secondary);
+    padding: 1rem;
+    border-radius: 8px;
 }
 .whats-app-cta {
   width: 60px;
