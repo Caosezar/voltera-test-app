@@ -57,7 +57,7 @@
 			<p class="result-box">Nenhuma estimativa encontrada para <strong>{data.name}</strong></p>
 		{:else}
 			<p class="load-box">
-				<LoadSpinner />Consultando...
+				Consultando... <LoadSpinner />
 			</p>
 		{/if}
 	{/if}
